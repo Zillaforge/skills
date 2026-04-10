@@ -1,5 +1,5 @@
 ---
-name: docker-compose-dev-env
+name: zillaforge-compose-dev-env
 description: 'Generate a devcontainer + docker-compose development environment for any project using a 3-layer architecture (persistent/system/service). Use when: scaffolding docker-compose dev environment, creating devcontainer configuration, adding Makefile dev targets, setting up infrastructure services (DB, MQ, cache), enabling profile-based service toggling, or reproducing the pegasus-cloud docker-compose pattern in a new project.'
 argument-hint: 'Describe the project, its dependencies (DB, MQ, cache, etc.), and which services need containers'
 ---
