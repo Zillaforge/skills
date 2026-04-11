@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/alpine
+{
+	"name": "alpine",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot-chat",
+				"isudox.vscode-jetbrains-keybindings",
+				"Arjun.swagger-viewer",
+				"vtkn.amazon-bedrock-copilot-chat",
+				"bierner.markdown-mermaid"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				},
+			}
+		}
+	},
+	"containerEnv": {
+	},
+	"features": {
+    	"ghcr.io/cirolosapio/devcontainers-features/alpine-git:0": {},
+		"ghcr.io/cirolosapio/devcontainers-features/alpine-node:0": {
+			"globalPackages": "openapi-to-skills"
+		}
+	},
+}
