@@ -2,4 +2,4 @@
 
 mkdir -p ~/.agents
 
-ln -s  /workspaces/skills ~/.agents
+ln -s  "$PWD" ~/.agents
