@@ -32,4 +32,5 @@
 			"globalPackages": "openapi-to-skills"
 		}
 	},
+	"postCreateCommand": "sh .devcontainer/postCreateCommand.sh"
 }
