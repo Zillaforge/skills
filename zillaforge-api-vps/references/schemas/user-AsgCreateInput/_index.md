@@ -1,0 +1,7 @@
+# user.AsgCreateInput Schemas
+
+1 schemas in this group.
+
+| Schema | Type | Description |
+|--------|------|-------------|
+| [user.AsgCreateInput](user-AsgCreateInput.md) | object |  |

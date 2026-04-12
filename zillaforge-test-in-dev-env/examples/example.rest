@@ -1,0 +1,22 @@
+@IAM_ENDPOINT=http://iam-server-release:8084/iam/api/v1
+
+
+### Admin Login
+# @name AdminLogin
+POST {{IAM_ENDPOINT}}/admin/login HTTP/1.1
+content-type: application/json
+
+{
+  "account": "admin@ci.asus.com",
+  "password": "admin"
+}
+
+###
+@ADMIN_TOKEN={{AdminLogin.response.body.$.token}}
+
+
+### QueryUserId
+# @name QueryUserId
+GET {{IAM_ENDPOINT}}/admin/users HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{ADMIN_TOKEN}}

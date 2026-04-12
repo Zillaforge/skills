@@ -12,7 +12,8 @@
 				"isudox.vscode-jetbrains-keybindings",
 				"Arjun.swagger-viewer",
 				"vtkn.amazon-bedrock-copilot-chat",
-				"bierner.markdown-mermaid"
+				"bierner.markdown-mermaid",
+				"humao.rest-client",
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh",
@@ -26,8 +27,12 @@
 	},
 	"containerEnv": {
 	},
+	"runArgs": [
+		// "--network=pegasus-cloud-network"
+	],
 	"features": {
     	"ghcr.io/cirolosapio/devcontainers-features/alpine-git:0": {},
+		"ghcr.io/cirolosapio/devcontainers-features/alpine-docker-outside-of-docker:0": {},
 		"ghcr.io/cirolosapio/devcontainers-features/alpine-node:0": {
 			"globalPackages": "openapi-to-skills"
 		}
