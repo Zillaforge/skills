@@ -2,7 +2,7 @@
 name: zillaforge-api-vps
 description: Virtual Platform Service (VPS) RESTful API documentation. Use this skill when you need to interact with the VPS service or look up API endpoints, request/response schemas, and parameters related to servers (instances), volumes, networks, routers, floating IPs, loadbalancers, auto scale groups (ASG), security groups, keypairs, shares, snapshots, flavors, or quotas. Load this skill to check VPS API contracts for both Project and Admin operations. Responses are in JSON format, and each API requires account authentication using an ApiKeyAuth token.
 metadata:
-  api-version: "0.1"
+  api-version: "0.4.24"
   openapi-version: "3.0.1"
 ---
 

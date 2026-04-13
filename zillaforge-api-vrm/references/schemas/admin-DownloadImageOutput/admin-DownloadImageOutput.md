@@ -1,0 +1,4 @@
+# admin.DownloadImageOutput
+
+**Type:** object
+

@@ -4,26 +4,29 @@
 **匯入 Image (已存在於openstack)**
 **Operation ID:** `post--admin-import`
 
+Creates a common tag from an existing OpenStack Glance image and sets it as public
+
 ## Request Body
 
-**Content Types:** `application/json`, `application/json/repositoryId`
+Import image request
 
-**Schema:** [importImageInput](../schemas/importImageInput/importImageInput.md)
+**Required:** Yes
+
+**Content Types:** `application/json`
+
+**Schema:** [admin.ImportImageInput](../schemas/admin-ImportImageInput/admin-ImportImageInput.md)
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 200 | OK |
-| 400 | (reference) |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 400 | Bad request |
+| 403 | Forbidden |
+| 404 | Not found |
+| 500 | Internal Server Error |
 
 **Success Response Schema:**
 
-[importImageOutput](../schemas/importImageOutput/importImageOutput.md)
+[admin.ImportImageOutput](../schemas/admin-ImportImageOutput/admin-ImportImageOutput.md)
 
-## Security
-
-- **bearerAuth**

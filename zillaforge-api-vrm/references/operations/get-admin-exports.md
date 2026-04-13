@@ -4,25 +4,25 @@
 **列出所有的匯出資訊**
 **Operation ID:** `get--admin-exports`
 
+Get a paginated list of exports with optional filtering
+
 ## Parameters
 
 | Name | In | Type | Required | Description |
 |------|------|------|----------|-------------|
-| `where` | query | string[] | No | 此功能可以帶入欄位及值作為查詢條件，來篩選出滿足條件的清單。支援的欄位：namespace, project-id, creator, repository-id, tag-id, status
- |
+| `limit` | query | integer | No | Number of items to return |
+| `offset` | query | integer | No | Number of items to skip |
+| `where` | query | string[] | No | Filter conditions |
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 200 | OK |
-| 403 | (reference) |
-| 500 | (reference) |
+| 403 | Forbidden |
+| 500 | Internal server error |
 
 **Success Response Schema:**
 
-[listExportsOutput.admin](../schemas/listExportsOutput-admin/listExportsOutput-admin.md)
+[admin.ListExportsOutput](../schemas/admin-ListExportsOutput/admin-ListExportsOutput.md)
 
-## Security
-
-- **bearerAuth**

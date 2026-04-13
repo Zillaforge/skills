@@ -1,29 +1,39 @@
-# POST /project/{project-id}/repository/{repository-id}/tag
+# POST /project/:{project-id}/repository/:{repository-id}/tag
 
 **Resource:** [User/Tag](../resources/User-Tag.md)
 **在 repository 創建 tag**
-**Operation ID:** `post--project-{project-id}-repository-{repository-id}-tag`
+**Operation ID:** `post--project-:{project-id}-repository-:{repository-id}-tag`
+
+Create a new tag with the specified name, type, disk format, and container format
+
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `project-id` | path | string | Yes | Project ID |
+| `repository-id` | path | string | Yes | Repository ID |
 
 ## Request Body
 
+Tag creation input
+
+**Required:** Yes
+
 **Content Types:** `application/json`
 
-**Schema:** [createTagInput](../schemas/createTagInput/createTagInput.md)
+**Schema:** [user.CreateTagInput](../schemas/user-CreateTagInput/user-CreateTagInput.md)
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
-| 201 | Created |
-| 400 | (reference) |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 201 | Successfully created tag |
+| 400 | Bad request - invalid input |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal server error |
 
 **Success Response Schema:**
 
-[createTagOutput](../schemas/createTagOutput/createTagOutput.md)
+[user.CreateTagOutput](../schemas/user-CreateTagOutput/user-CreateTagOutput.md)
 
-## Security
-
-- **bearerAuth**

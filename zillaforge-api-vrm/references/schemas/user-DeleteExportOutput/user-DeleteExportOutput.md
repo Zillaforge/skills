@@ -1,0 +1,4 @@
+# user.DeleteExportOutput
+
+**Type:** object
+

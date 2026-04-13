@@ -1,0 +1,4 @@
+# user.DeleteMemberAclOutput
+
+**Type:** object
+

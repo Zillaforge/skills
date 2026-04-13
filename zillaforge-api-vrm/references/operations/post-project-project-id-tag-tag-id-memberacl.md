@@ -1,29 +1,39 @@
-# POST /project/{project-id}/tag/{tag-id}/memberacl
+# POST /project/:{project-id}/tag/:{tag-id}/memberacl
 
 **Resource:** [User/MemberAcl](../resources/User-MemberAcl.md)
-**在指定的 tag 創建 member-acl**
-**Operation ID:** `post--project-{project-id}-tag-{tag-id}-memberacl`
+**Create member ACL batch**
+**Operation ID:** `post--project-:{project-id}-tag-:{tag-id}-memberacl`
+
+Create multiple member ACLs in batch for repository or tag context
+
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `project-id` | path | string | Yes | Project ID |
+| `tag-id` | path | string | Yes | Tag ID (for tag context) |
 
 ## Request Body
 
+Create member ACL batch request
+
+**Required:** Yes
+
 **Content Types:** `application/json`
 
-**Schema:** [createMemberAclInput](../schemas/createMemberAclInput/createMemberAclInput.md)
+**Schema:** [user.CreateMemberAclBatchInput](../schemas/user-CreateMemberAclBatchInput/user-CreateMemberAclBatchInput.md)
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 201 | Created |
-| 400 | (reference) |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 400 | Bad Request |
+| 403 | Forbidden |
+| 404 | Not found |
+| 500 | Internal Server Error |
 
 **Success Response Schema:**
 
-[createMemberAclOutput](../schemas/createMemberAclOutput/createMemberAclOutput.md)
+[user.CreateMemberAclBatchOutput](../schemas/user-CreateMemberAclBatchOutput/user-CreateMemberAclBatchOutput.md)
 
-## Security
-
-- **bearerAuth**

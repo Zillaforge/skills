@@ -4,25 +4,26 @@
 **列出所有的 repositories**
 **Operation ID:** `get--admin-repositories`
 
+Get a paginated list of repositories with optional filtering
+
 ## Parameters
 
 | Name | In | Type | Required | Description |
 |------|------|------|----------|-------------|
-| `where` | query | string[] | No | 此功能可以帶入欄位及值作為查詢條件，來篩選出滿足條件的清單。支援的欄位：os, creator, project-id
- |
+| `limit` | query | integer | No | Limit number of results |
+| `offset` | query | integer | No | Offset for pagination |
+| `where` | query | string[] | No | Filter conditions |
+| `namespace` | query | string | No | Filter by namespace |
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 200 | OK |
-| 403 | (reference) |
-| 500 | (reference) |
+| 403 | Forbidden |
+| 500 | Internal server error |
 
 **Success Response Schema:**
 
-[listRepositoriesOutput](../schemas/listRepositoriesOutput/listRepositoriesOutput.md)
+[admin.ListRepositoriesOutput](../schemas/admin-ListRepositoriesOutput/admin-ListRepositoriesOutput.md)
 
-## Security
-
-- **bearerAuth**

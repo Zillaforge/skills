@@ -4,26 +4,27 @@
 **取得所有 tags**
 **Operation ID:** `get--admin-tags`
 
+Get a paginated list of tags with optional filtering by namespace and where conditions
+
 ## Parameters
 
 | Name | In | Type | Required | Description |
 |------|------|------|----------|-------------|
-| `where` | query | string[] | No | 此功能可以帶入欄位及值作為查詢條件，來篩選出滿足條件的清單。支援的欄位：status, type, repository-id, project-id
- |
+| `limit` | query | integer | No | Number of items to return (default: 100) |
+| `offset` | query | integer | No | Number of items to skip (default: 0) |
+| `where` | query | string[] | No | Filter conditions |
+| `namespace` | query | string | No | Filter by namespace |
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 200 | OK |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal Server Error |
 
 **Success Response Schema:**
 
-[listTagsOutput](../schemas/listTagsOutput/listTagsOutput.md)
+[admin.ListTagsOutput](../schemas/admin-ListTagsOutput/admin-ListTagsOutput.md)
 
-## Security
-
-- **bearerAuth**

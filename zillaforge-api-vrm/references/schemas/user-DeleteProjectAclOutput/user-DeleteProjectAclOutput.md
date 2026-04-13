@@ -1,0 +1,4 @@
+# user.DeleteProjectAclOutput
+
+**Type:** object
+

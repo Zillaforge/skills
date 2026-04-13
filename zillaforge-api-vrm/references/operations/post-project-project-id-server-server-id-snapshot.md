@@ -1,29 +1,37 @@
-# POST /project/{project-id}/server/{server-id}/snapshot
+# POST /project/:{project-id}/server/:{server-id}/snapshot
 
 **Resource:** [User/Snapshot](../resources/User-Snapshot.md)
 **對 Server 建立 snapshot**
-**Operation ID:** `post--project-{project-id}-server-{server-id}-snapshot`
+**Operation ID:** `post--project-:{project-id}-server-:{server-id}-snapshot`
+
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `project-id` | path | string | Yes | Project ID |
+| `server-id` | path | string | Yes | Server ID |
 
 ## Request Body
 
-**Content Types:** `application/json`, `application/json/repositoryId`
+body data
 
-**Schema:** [createSnapshotInput](../schemas/createSnapshotInput/createSnapshotInput.md)
+**Required:** Yes
+
+**Content Types:** `application/json`
+
+**Schema:** [user.CreateSnapshotInput](../schemas/user-CreateSnapshotInput/user-CreateSnapshotInput.md)
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 201 | Created |
-| 400 | (reference) |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 400 | Bad Request |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal Server Error |
 
 **Success Response Schema:**
 
-[createSnapshotOutput](../schemas/createSnapshotOutput/createSnapshotOutput.md)
+[user.CreateSnapshotOutput](../schemas/user-CreateSnapshotOutput/user-CreateSnapshotOutput.md)
 
-## Security
-
-- **bearerAuth**

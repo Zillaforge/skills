@@ -1,11 +1,9 @@
 ---
 name: zillaforge-api-iam
 description: Pegasus IAM (Identity and Access Management) RESTful API documentation. Use this skill when you need to interact with the IAM service or look up API endpoints, request/response schemas, and parameters related to authentication (login/logout, MFA, SAML), authorization, users, projects (tenants), memberships (role assignments), permissions, CLI secrets, Personal Access API Tokens (PAAT), credentials, usage time, or account freezing. Load this skill to check IAM API contracts for both User and Admin operations. Responses are in JSON format, and each API requires account authentication using a Bearer Token.
-license: Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 metadata:
-  api-version: "1.0.0"
+  api-version: "1.8.3"
   openapi-version: "3.0.0"
-  contact: "osci_admin@asus.com"
 ---
 
 # Pegasus IAM RESTful API

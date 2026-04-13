@@ -1,11 +1,9 @@
 ---
 name: zillaforge-api-vrm
 description: Virtual Registry Management (VRM) RESTful API documentation. Use this skill when you need to interact with the VRM service or look up API endpoints, request/response schemas, and parameters related to repositories, tags, images, snapshots, project ACLs, member ACLs, or export/import/upload operations. Load this skill to check VRM API contracts for both Admin and User (Project) operations. Responses are in JSON format, and each API requires account authentication using a Bearer token.
-license: Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 metadata:
-  api-version: "1.0.0"
+  api-version: "0.1.11"
   openapi-version: "3.0.0"
-  contact: "osci_admin@asus.com"
 ---
 
 # Virtual Registry Management RESTful API
@@ -20,8 +18,8 @@ This API documentation is split into multiple files for on-demand loading.
 ```
 references/
 ├── resources/      # 16 resource index files
-├── operations/     # 56 operation detail files
-└── schemas/        # 55 schema groups, 55 schema files
+├── operations/     # 59 operation detail files
+└── schemas/        # 88 schema groups, 88 schema files
 ```
 
 **Navigation flow:**
@@ -44,19 +42,19 @@ Supported methods: **bearerAuth**. See `references/authentication.md` for detail
 
 ## Resources
 
-- **Admin/Repository** → `references/resources/Admin-Repository.md` (8 ops) - Repository RESTful APIs
-- **Admin/Tag** → `references/resources/Admin-Tag.md` (7 ops) - Tag RESTful APIs
-- **User/Tag** → `references/resources/User-Tag.md` (6 ops) - Tag RESTful APIs
-- **User/Repository** → `references/resources/User-Repository.md` (5 ops) - Repository RESTful APIs
-- **Admin/ProjectAcl** → `references/resources/Admin-ProjectAcl.md` (5 ops) - ProjectAcl RESTful APIs
-- **User/MemberAcl** → `references/resources/User-MemberAcl.md` (4 ops) - MemberAcl RESTful APIs
-- **User/Export** → `references/resources/User-Export.md` (3 ops) - Export RESTful APIs
-- **Admin/Image** → `references/resources/Admin-Image.md` (3 ops) - Image RESTful APIs
-- **Admin/Export** → `references/resources/Admin-Export.md` (3 ops) - Export RESTful APIs
-- **Admin/MemberAcl** → `references/resources/Admin-MemberAcl.md` (3 ops) - MemberAcl RESTful APIs
-- **User/Image** → `references/resources/User-Image.md` (2 ops) - Image RESTful APIs
-- **User/ProjectAcl** → `references/resources/User-ProjectAcl.md` (2 ops) - ProjectAcl RESTful APIs
-- **Admin/Project** → `references/resources/Admin-Project.md` (2 ops) - Project RESTful APIs
-- **User/Project** → `references/resources/User-Project.md` (1 ops) - Project RESTful APIs
-- **User/Snapshot** → `references/resources/User-Snapshot.md` (1 ops) - Snapshot RESTful APIs
-- **Admin/Snapshot** → `references/resources/Admin-Snapshot.md` (1 ops) - Snapshot RESTful APIs
+- **User/Tag** → `references/resources/User-Tag.md` (8 ops)
+- **Admin/Repository** → `references/resources/Admin-Repository.md` (7 ops)
+- **Admin/Tag** → `references/resources/Admin-Tag.md` (7 ops)
+- **Admin/ProjectAcl** → `references/resources/Admin-ProjectAcl.md` (5 ops)
+- **User/Repository** → `references/resources/User-Repository.md` (5 ops)
+- **User/MemberAcl** → `references/resources/User-MemberAcl.md` (4 ops)
+- **Admin/Export** → `references/resources/Admin-Export.md` (3 ops)
+- **Admin/Image** → `references/resources/Admin-Image.md` (3 ops)
+- **Admin/MemberAcl** → `references/resources/Admin-MemberAcl.md` (3 ops)
+- **Admin/Project** → `references/resources/Admin-Project.md` (3 ops)
+- **User/Exports** → `references/resources/User-Exports.md` (3 ops)
+- **User/Snapshot** → `references/resources/User-Snapshot.md` (2 ops)
+- **User/Image** → `references/resources/User-Image.md` (2 ops)
+- **User/ProjectAcl** → `references/resources/User-ProjectAcl.md` (2 ops)
+- **Admin/Snapshot** → `references/resources/Admin-Snapshot.md` (1 ops)
+- **User/Project** → `references/resources/User-Project.md` (1 ops)

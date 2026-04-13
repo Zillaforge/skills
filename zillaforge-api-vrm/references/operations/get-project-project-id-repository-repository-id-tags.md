@@ -1,29 +1,37 @@
-# GET /project/{project-id}/repository/{repository-id}/tags
+# GET /project/:{project-id}/repository/:{repository-id}/tags
 
 **Resource:** [User/Tag](../resources/User-Tag.md)
-**取得此 repository 的所有 tags**
-**Operation ID:** `get--project-{project-id}-repository-{repository-id}-tags`
+**取得可使用的所有 tags**
+**Operation ID:** `get--project-:{project-id}-repository-:{repository-id}-tags`
+
+Get a list of tags that the user has access to, with optional filtering
 
 ## Parameters
 
 | Name | In | Type | Required | Description |
 |------|------|------|----------|-------------|
-| `where` | query | string[] | No | 此功能可以帶入欄位及值作為查詢條件，來篩選出滿足條件的清單。支援的欄位：status, type
- |
+| `project-id` | path | string | Yes | Project ID |
+| `repository-id` | path | string | Yes | Repository ID (only for repository-specific endpoint) |
+| `limit` | query | integer | No | Limit number of results |
+| `offset` | query | integer | No | Offset for pagination |
+| `where` | query | string[] | No | Filter conditions |
+| `adminRole` | query | boolean | No | set false to disable admin ability if admin called and wanted |
+| `creator` | query | boolean | No | belong to the current user, default is true |
+| `projectLimit` | query | boolean | No | share to current User, default is true |
+| `projectPublic` | query | boolean | No | public in project, default is true |
+| `globalLimit` | query | boolean | No | share to current project, default is true |
+| `globalPublic` | query | boolean | No | public in namespace, default is true |
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 200 | OK |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal server error |
 
 **Success Response Schema:**
 
-[listTagsOutput](../schemas/listTagsOutput/listTagsOutput.md)
+[user.ListTagsOutput](../schemas/user-ListTagsOutput/user-ListTagsOutput.md)
 
-## Security
-
-- **bearerAuth**

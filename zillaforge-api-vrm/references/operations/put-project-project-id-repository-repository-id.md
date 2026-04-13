@@ -1,30 +1,40 @@
-# PUT /project/{project-id}/repository/{repository-id}
+# PUT /project/:{project-id}/repository/:{repository-id}
 
 **Resource:** [User/Repository](../resources/User-Repository.md)
 **更新指定的 repository**
-**Operation ID:** `put--project-{project-id}-repository-{repository-id}`
+**Operation ID:** `put--project-:{project-id}-repository-:{repository-id}`
+
+Update repository information including name and description
+
+## Parameters
+
+| Name | In | Type | Required | Description |
+|------|------|------|----------|-------------|
+| `project-id` | path | string | Yes | Project ID |
+| `repository-id` | path | string | Yes | Repository ID |
 
 ## Request Body
 
+Repository update data
+
+**Required:** Yes
+
 **Content Types:** `application/json`
 
-**Schema:** [updateRepositoryInput](../schemas/updateRepositoryInput/updateRepositoryInput.md)
+**Schema:** [user.UpdateRepositoryInput](../schemas/user-UpdateRepositoryInput/user-UpdateRepositoryInput.md)
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
-| 200 | OK |
-| 400 | (reference) |
-| 401 | (reference) |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 200 | Successfully updated repository |
+| 400 | Bad request - malformed input |
+| 401 | Unauthorized - insufficient permissions |
+| 403 | Forbidden |
+| 404 | Repository not found |
+| 500 | Internal server error |
 
 **Success Response Schema:**
 
-[updateRepositoryOutput](../schemas/updateRepositoryOutput/updateRepositoryOutput.md)
+[user.UpdateRepositoryOutput](../schemas/user-UpdateRepositoryOutput/user-UpdateRepositoryOutput.md)
 
-## Security
-
-- **bearerAuth**

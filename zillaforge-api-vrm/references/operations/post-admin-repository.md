@@ -4,26 +4,29 @@
 **創建 repository**
 **Operation ID:** `post--admin-repository`
 
+Create a new repository with administrative privileges
+
 ## Request Body
+
+Repository creation payload
+
+**Required:** Yes
 
 **Content Types:** `application/json`
 
-**Schema:** [createRepositoryInput.admin](../schemas/createRepositoryInput-admin/createRepositoryInput-admin.md)
+**Schema:** [admin.CreateRepositoryInput](../schemas/admin-CreateRepositoryInput/admin-CreateRepositoryInput.md)
 
 ## Responses
 
 | Status | Description |
 |--------|-------------|
 | 201 | Created |
-| 400 | (reference) |
-| 403 | (reference) |
-| 404 | (reference) |
-| 500 | (reference) |
+| 400 | Bad request |
+| 403 | Forbidden |
+| 404 | Not Found |
+| 500 | Internal server error |
 
 **Success Response Schema:**
 
-[createRepositoryOutput](../schemas/createRepositoryOutput/createRepositoryOutput.md)
+[admin.CreateRepositoryOutput](../schemas/admin-CreateRepositoryOutput/admin-CreateRepositoryOutput.md)
 
-## Security
-
-- **bearerAuth**

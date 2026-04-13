@@ -1,7 +1,0 @@
-# downloadImageInput Schemas
-
-1 schemas in this group.
-
-| Schema | Type | Description |
-|--------|------|-------------|
-| [downloadImageInput](downloadImageInput.md) | object |  |
